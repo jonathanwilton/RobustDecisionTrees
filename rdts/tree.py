@@ -4,8 +4,8 @@ import numpy as np
 from sklearn.preprocessing import LabelEncoder
 from sklearn.utils import check_random_state
 
-from dts import helper_functions as hf
-from dts import tree_builder
+from rdts import helper_functions as hf
+from rdts import tree_builder
 
 
 class DecisionTree:

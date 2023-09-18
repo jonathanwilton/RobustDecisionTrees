@@ -3,7 +3,7 @@ from joblib import Parallel, delayed
 from sklearn.preprocessing import LabelEncoder
 from sklearn.utils import check_random_state, resample
 
-from dts.tree import DecisionTree
+from rdts.tree import DecisionTree
 
 
 class DecisionForest:

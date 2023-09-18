@@ -2,8 +2,8 @@ import time
 
 import numpy as np
 
-import dts.helper_functions as hf
-from dts.node import Node
+import rdts.helper_functions as hf
+from rdts.node import Node
 
 
 def grow_dt(init_args, X, y, additional_args, random):
