@@ -41,7 +41,7 @@ A minimal working example:
 ```
 from sklearn.datasets import make_classification
 from sklearn.model_selection import train_test_split
-from dts.trees import DecisionForest
+from rdts.trees import DecisionForest
 
 X, y = make_classification()
 X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.8)
