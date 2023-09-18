@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools"] 
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rdts"
+version = "0.0.1"
+authors = [
+    { name="Jonathan Wilton", email="jonathan.wilton@uq.edu.au" },
+]
+description = "A python implementation of tree methods with support for many loss functions/splitting criteria."
+readme = "README.md"
+requires-python = ">=3.8.1"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Github" = "https://github.com/jonathanwilton/RobustDecisionTrees"
