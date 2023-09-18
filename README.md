@@ -24,7 +24,7 @@ Supports training with several loss functions and splitting criteria:
 ## Installation
 To pip install this package locally, run:
 ```
-pip install <placeholder>
+pip install git+https://github.com/jonathanwilton/RobustDecisionTrees.git@main
 ```
 
 
