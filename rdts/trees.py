@@ -94,7 +94,7 @@ class DecisionForest:
 
         Returns
         -------
-        g : dts.tree.DecisionTree
+        g : rdts.tree.DecisionTree
             The trained decision tree.
         """
 
@@ -155,7 +155,7 @@ class DecisionForest:
 
         Parameters
         ----------
-        g : dts.tree.DecisionTree
+        g : rdts.tree.DecisionTree
             The decision tree to use for prediction.
         X : array-like of shape (n_samples, n_features)
             Testing input samples.
