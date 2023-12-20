@@ -1,9 +1,8 @@
 import numpy as np
-from sklearn.datasets import make_classification
-from sklearn.model_selection import train_test_split
-
 from rdts.tree import DecisionTree
 from rdts.trees import DecisionForest
+from sklearn.datasets import make_classification
+from sklearn.model_selection import train_test_split
 
 rs = 1
 X, y = make_classification(n_samples=1000, random_state=rs)
@@ -39,6 +38,37 @@ g = DecisionTree(
 )
 g.fit(X_train, y_train)
 print("Test accuracy GCE 1/e:", g.score(X_test, y_test))
+
+# some other loss functions/splitting criteria
+loss_functions = [
+    "conservative",  # misclassification impurity
+    "ne",  # negative exponential loss lambda=0.5
+    "ne 0.1",  # negative exponential loss lambda=0.1
+    "ne 0.9",  # negative exponential loss lambda=0.9
+    "sqrt-gini",  # sqrt of Gini impurity
+    "mse",  # Gini impurity
+    "ce",  # entropy impurity
+    "gce",  # generalized cross entropy impurity with q=0.7
+    "gce 0.1",  # generalized cross entropy impurity with q=0.1
+    "gce 0.9",  # generalized cross entropy impurity with q=0.9
+    "ranking",  # ranking loss
+    "twoing",  # twoing split criteria
+    "credal",  # Credal-C4.5 with s=1
+]
+for lf in loss_functions:
+    g = DecisionTree(
+        loss=lf,
+        max_depth=None,
+        max_leaf_nodes=None,
+        min_samples_leaf=1,
+        splitter="random",
+        max_features="sqrt",
+        max_thresholds=1,
+        min_risk_decrease=0.0,
+        random_state=rs,
+    )
+    g.fit(X_train, y_train)
+    print(f"Test accuracy {lf} loss:", g.score(X_test, y_test))
 
 print("\nRandom Forest")
 # conservative loss/misclassification impurity
