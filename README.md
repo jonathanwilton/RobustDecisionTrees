@@ -1,6 +1,8 @@
 # Robust Loss Functions for Training Decision Trees with Noisy Labels
 
----Reference or link to paper---
+Official implementation for "Robust Loss Functions for Training Decision Trees with Noisy Labels". 
+
+Accepted into AAAI Conference on Artificial Intelligence 2024.
 
 ## Overview
 
