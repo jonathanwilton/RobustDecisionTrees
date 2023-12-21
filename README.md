@@ -4,6 +4,8 @@ Official implementation for "Robust Loss Functions for Training Decision Trees w
 
 Accepted into AAAI Conference on Artificial Intelligence 2024.
 
+Paper: https://arxiv.org/abs/2312.12937
+
 ## Overview
 
 A python implementation of tree methods for classification.
