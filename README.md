@@ -37,13 +37,13 @@ pip install git+https://github.com/jonathanwilton/RobustDecisionTrees.git@main
 A minimal working example with decision tree classifier:
 
 ```python
-from sklearn.datasets import make_classification
 from rdts.tree import DecisionTree
+from sklearn.datasets import make_classification
 
-X,y = make_classification()
+X, y = make_classification()
 g = DecisionTree()
-g.fit(X,y)
-print("Accuracy:", g.score(X,y))
+g.fit(X, y)
+print("Accuracy:", g.score(X, y))
 ```
 
 A random forest with 10 trees, 
